@@ -1,0 +1,21 @@
+import React from 'react'
+
+const NewTask = ({data}) => {
+  return (
+     <div className='h-full w-100 bg-green-200 flex-shrink-0 px-7 py-5 rounded-xl relative overflow-hidden'>
+            <div className=' flex justify-between items-center'>
+                <h1 className='bg-red-500 px-3 py-1 text-sm font-medium rounded'> {data.category} </h1>
+                <h2 className='font-bold  '> {data.taskDate} </h2>
+            </div>
+            <h2 className='text-3xl mt-6 font-bold'> {data.taskTitle} </h2>
+            <p className='font-normal mt-2'> {data.taskDescription} </p>
+             <div className='flex justify-between items-center mt-3'>
+                <button className='bg-green-500 px-3 py-1 rounded text-sm '> Mark as Completed</button>
+                <button className='bg-red-500 px-3 py-1 rounded text-sm '> Mark as Failed</button>
+            </div>
+            <h1 className='absolute bottom-2 right-0 bg-blue-600 px-3 py-1 text-sm font-semibold rounded-l-md '>New Task</h1>
+        </div>
+  )
+}
+
+export default NewTask
