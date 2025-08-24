@@ -12,7 +12,7 @@ const Header = (props) => {
 
     function logoutUser (){
         localStorage.setItem('loggedInUser', '')
-        props.changeUser(" ") // no need to do that window.location.reload(), coz it will reload our page so whats the use of using the react if we had to reload it. So, did this
+        props.changeUser("") // no need to do that window.location.reload(), coz it will reload our page so whats the use of using the react if we had to reload it. So, did this
     }
 
   return (
