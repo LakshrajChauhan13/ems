@@ -12,6 +12,7 @@ const CreateTask = () => {
 
   function submitHandler(e){
     e.preventDefault()
+    console.log(TaskDescription , Tasktitle , Date , AssignTo , Category);
     setTasktitle("")
     setDate("")
     setAssignTo("")
@@ -61,6 +62,7 @@ const CreateTask = () => {
                 value={TaskDescription}
                 onChange={(e)=>{setTaskDescription(e.target.value)}} 
                 name="" id="" className='border-2 w-full h-55 mt-1 p-1 rounded'></textarea>
+
                 <button className='w-full text-xl py-3 font-semibold mt-4 bg-emerald-500 outline-none rounded'> Create Task</button>
             </div>
            

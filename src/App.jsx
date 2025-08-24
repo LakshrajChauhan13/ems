@@ -53,8 +53,8 @@ const App = () => {
   return (
     <>
     {!User ? <Login HandleLogin ={handleLogin} /> : ''}
-    {User == "admin" && <AdminDashboard /> } {/* if user is admin then will only render the AdminDashboard component , yeah in general && operator checks both the condition to let the control flow enter inside it,  but here it behaves in a special way when used for conditional rendering in React.*/}
-    {User == "employee" && <EmployeeDashboard data={LoggedinUserData} /> } {/* if user is employee then will only render the EmployeeDashboard component
+    {User == "admin" && <AdminDashboard changeUser={setUser} /> } {/* if user is admin then will only render the AdminDashboard component , yeah in general && operator checks both the condition to let the control flow enter inside it,  but here it behaves in a special way when used for conditional rendering in React.*/}
+    {User == "employee" && <EmployeeDashboard data={LoggedinUserData} changeUser={setUser}/> } {/* if user is employee then will only render the EmployeeDashboard component
    
 
     {/* {

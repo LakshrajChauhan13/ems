@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 
-const Header = ({data}) => {
+const Header = (props) => {
     const [Username, setUsername] = useState('')
     // if (!data) {
     //     setUsername("Admin")
@@ -12,7 +12,7 @@ const Header = ({data}) => {
 
     function logoutUser (){
         localStorage.setItem('loggedInUser', '')
-        window.location.reload()
+        props.changeUser(" ") // no need to do that window.location.reload(), coz it will reload our page so whats the use of using the react if we had to reload it. So, did this
     }
 
   return (
