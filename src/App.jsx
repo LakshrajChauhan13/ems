@@ -9,8 +9,8 @@ const App = () => {
 
   const [User, setUser] = useState(null)
   const [LoggedinUserData, setLoggedinUserData] = useState(null)
-  const AuthData = useContext(AuthContext)
-  console.log(AuthData)
+  const [userData , setUserData] = useContext(AuthContext)
+  console.log(userData)
 
   const handleLogin = (email,password) => {
       if (email == "admin@me.com" && password == 123) {
@@ -19,8 +19,8 @@ const App = () => {
         localStorage.setItem('loggedInUser', JSON.stringify({role:"admin"})) 
       }
 
-      else if (AuthData) {
-        const employe = AuthData.employees.find((e)=> email == e.email && password == e.password)
+      else if (userData) {
+        const employe = userData.find((e)=> email == e.email && password == e.password)
         if(employe){
           setUser("employee")
           setLoggedinUserData(employe)
