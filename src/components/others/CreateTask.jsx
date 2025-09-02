@@ -18,10 +18,10 @@ const CreateTask = () => {
 
     // setNewTask({Tasktitle , TaskDescription , Date , Category , active:false , newTask:true , failed:false , completed:false}) 
     const task = {
-      Tasktitle,
-      TaskDescription,
-      Date,
-      Category,
+      taskTitle: Tasktitle,
+      taskDescription: TaskDescription,
+      taskDate: Date,
+      category: Category,
       active:false , 
       newTask:true , 
       failed:false , 
