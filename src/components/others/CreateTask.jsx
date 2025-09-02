@@ -28,16 +28,17 @@ const CreateTask = () => {
       completed:false ,
     }
 
-    const data = UserData
+    // const data = UserData
     // console.log(data);
 
-    data.forEach(function(e){
+    const data = UserData.map(function(e){
       if(AssignTo == e.firstName){
         e.tasks.push(task)
         e.taskCount.newTask = e.taskCount.newTask+1
         console.log(e)
       }
-    });
+      return e
+    })
     
     // console.log(data);
     
