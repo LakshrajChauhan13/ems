@@ -58,7 +58,8 @@ const CreateTask = () => {
                 value={Tasktitle}
                 onChange={(e)=>{setTasktitle(e.target.value)}} 
                 type="text" 
-                placeholder='Make A UI Design' 
+                placeholder='Make A UI Design'
+                required 
                 className=' border-2 mt-1 mb-4 rounded w-full p-1  text-gray-400'/>
                 
                 <h1 className='text-xl'>Date</h1>
@@ -67,6 +68,7 @@ const CreateTask = () => {
                 onChange={(e)=>{setDate(e.target.value)}}  
                 type="date" 
                 placeholder='dd/mm/yyyy' 
+                required 
                 className=' border-2 mt-1 mb-4 rounded w-full p-1  text-gray-400' />
 
                 <h1 className='text-xl'>Assign To</h1>
@@ -75,6 +77,7 @@ const CreateTask = () => {
                 onChange={(e)=>{setAssignTo(e.target.value)}}  
                 type="text" 
                 placeholder='employee name' 
+                required 
                 className=' border-2 mt-1 mb-4 rounded w-full p-1  text-gray-400' />
 
                 <h1 className='text-xl'>Category</h1>
@@ -83,6 +86,7 @@ const CreateTask = () => {
                 onChange={(e)=>{setCategory(e.target.value)}}  
                 type="text" 
                 placeholder='Design, Dev, etc..' 
+                required
                 className=' border-2 mt-1 mb-4 rounded w-full p-1 text-gray-400' />
             </div>
             <div className='h-80 w-[40%] flex flex-col'>
@@ -90,7 +94,7 @@ const CreateTask = () => {
                 <textarea
                 value={TaskDescription}
                 onChange={(e)=>{setTaskDescription(e.target.value)}} 
-                name="" id="" className='border-2 w-full h-55 mt-1 p-1 rounded'></textarea>
+                name="" id="" required className='border-2 w-full h-55 mt-1 p-1 rounded'></textarea>
 
                 <button className='w-full text-xl py-3 font-semibold mt-4 bg-emerald-500 outline-none rounded'> Create Task</button>
             </div>
