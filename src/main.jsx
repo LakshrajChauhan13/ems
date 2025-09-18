@@ -10,9 +10,7 @@ import { HashRouter } from 'react-router-dom'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <AuthProvider> 
-      <HashRouter> 
-      <App />
-      </HashRouter>
+     <App />
     </AuthProvider>
   </StrictMode>,
 
